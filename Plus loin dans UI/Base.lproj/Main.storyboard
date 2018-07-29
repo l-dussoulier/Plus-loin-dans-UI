@@ -13,7 +13,7 @@
         <!--Item 2-->
         <scene sceneID="SO9-Il-9kC">
             <objects>
-                <viewController id="PQX-bL-05z" sceneMemberID="viewController">
+                <viewController id="PQX-bL-05z" customClass="ProgrammatiqueController" customModule="Plus_loin_dans_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ecP-XN-ZdE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,14 +29,31 @@
         <!--Item 1-->
         <scene sceneID="FPd-BB-Vp6">
             <objects>
-                <viewController id="vJP-Qt-rPd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Sf1-j9-fOT">
+                <viewController id="vJP-Qt-rPd" customClass="CycleEtFrameController" customModule="Plus_loin_dans_UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sf1-j9-fOT" customClass="Cycle">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qa-i3-ubw">
+                                <rect key="frame" x="67" y="110" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="riB-oa-qBl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5qa-i3-ubw" firstAttribute="top" secondItem="JPF-XR-IEG" secondAttribute="top" constant="90" id="SxH-CZ-NhW"/>
+                            <constraint firstItem="5qa-i3-ubw" firstAttribute="leading" secondItem="JPF-XR-IEG" secondAttribute="leading" constant="67" id="ncD-3D-lXW"/>
+                            <constraint firstItem="JPF-XR-IEG" firstAttribute="trailing" secondItem="5qa-i3-ubw" secondAttribute="trailing" constant="68" id="tx7-Va-G1b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JPF-XR-IEG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="haJ-nK-pf9"/>
+                    <connections>
+                        <outlet property="vueFrameEtBounds" destination="5qa-i3-ubw" id="xCz-s9-6sm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ze0-f2-qU7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
