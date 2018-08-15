@@ -35,7 +35,7 @@ class ProgrammatiqueController: UIViewController {
         monPremierLabel?.textAlignment = .center
         scroll.addSubview(monPremierLabel! )
         
-        let rectDemonBouton = CGRect(x: view.frame.width / 2-75, y: monPremierLabel!.frame.maxY + 20, width: 150, height: 40)
+        let rectDemonBouton = CGRect(x: view.frame.width / 2-75, y: monPremierLabel!.frame.maxY + 800, width: 150, height: 40)
         monPremierBouton = UIButton(frame: rectDemonBouton)
         monPremierBouton?.setTitle("Appuyer", for: UIControlState.normal)
         monPremierBouton?.tintColor = UIColor.red
@@ -76,7 +76,7 @@ class ProgrammatiqueController: UIViewController {
             
         }
         
-        scroll.contentSize = CGSize(width: view.frame.width * 2, height: maximum + 100)
+        scroll.contentSize = CGSize(width: view.frame.width, height: maximum + 100)
     }
     
     @objc func imageAppuye() {
@@ -85,6 +85,9 @@ class ProgrammatiqueController: UIViewController {
     
     @objc func boutonAppuye() {
         print("tu as bien appyué")
+        monPremierBouton?.backgroundColor = .yellow
+        
+         
     }
     
 
